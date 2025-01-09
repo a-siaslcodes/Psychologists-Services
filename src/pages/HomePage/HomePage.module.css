@@ -1,0 +1,180 @@
+.content {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--light);
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  gap: 125px;
+}
+
+.mainBox {
+  margin-top: 126px;
+  display: flex;
+  flex-direction: column;
+  height: 438px;
+  width: 595px;
+}
+
+.heroBox {
+  margin-top: 78px;
+  position: relative;
+}
+
+.heroImg {
+  border-radius: 10px;
+  width: 464px;
+  height: 526px;
+  display: block;
+}
+
+.title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 102%;
+  letter-spacing: -0.02em;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+
+.accent {
+  color: var(--green);
+  font-style: italic;
+}
+
+.text {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 133%;
+  letter-spacing: -0.02em;
+  color: var(--black);
+  margin-bottom: 40px;
+  width: 510px;
+}
+.button {
+  border-radius: 30px;
+  width: 235px;
+  height: 60px;
+  background-color: var(--green);
+
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  color: var(--light);
+  align-items: center;
+}
+
+.button:hover {
+  background-color: var(--button-hover);
+}
+
+.buttonIcon {
+  display: inline-block;
+  width: 15px;
+  height: 17px;
+  fill: #ffff;
+  margin-left: 18px;
+}
+
+.infoBox {
+  border-radius: 20px;
+  width: 311px;
+  height: 118px;
+  background-color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  position: absolute;
+  bottom: 75px;
+  left: -101px;
+}
+
+.infoBoxIcon {
+  border-radius: 13px;
+  width: 54px;
+  height: 54px;
+  background-color: var(--light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoBoxText {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(251, 251, 251, 0.5);
+}
+
+.infoBoxNumber {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--light);
+}
+
+.checkIcon {
+  fill: var(--green);
+  width: 20px;
+  height: 16px;
+}
+
+.boxTwo {
+  display: block;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  background: #4535af;
+  transform: rotate(-15deg);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 185px;
+  left: -29px;
+}
+
+.boxOne {
+  display: block;
+  border-radius: 10px;
+  background: #fbc75e;
+
+  transform: rotate(15deg);
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 38px;
+  left: 449px;
+}
+
+.questionIcon {
+  fill: var(--light);
+  width: 10px;
+  height: 17px;
+  transform: rotate(15deg);
+}
+
+.userIcon {
+  fill: var(--light);
+  height: 25px;
+  width: 25px;
+  transform: rotate(-15deg);
+}

@@ -1,0 +1,93 @@
+.accent {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: var(--green);
+}
+
+.logo {
+  font-weight: 600;
+  color: var(--black);
+  margin-right: 130px;
+}
+
+.header {
+  width: 100%;
+  height: 96px;
+  background-color: var(--light);
+
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  border-bottom: solid 1px rgba(25, 26, 21, 0.1);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftBlock {
+  display: flex;
+  align-items: center;
+}
+
+.authBox {
+  display: flex;
+  gap: 8px;
+}
+
+.homeLink {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+
+  color: var(--black);
+
+  margin-right: 40px;
+}
+
+.link {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+
+  color: var(--black);
+}
+
+.registerButton {
+  border-radius: 30px;
+  width: 171px;
+  height: 48px;
+  background-color: var(--green);
+  color: var(--light);
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+.registerButton:hover {
+  background-color: var(--button-hover);
+}
+
+.loginButton {
+  border-radius: 30px;
+  border: 1px solid rgba(25, 26, 21, 0.2);
+  background: transparent;
+  width: 124px;
+  height: 48px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+
+.loginButton:hover {
+  background-color: rgba(84, 190, 150, 0.2);
+}
