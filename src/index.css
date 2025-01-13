@@ -2,9 +2,12 @@
   font-family: Inter, sans-serif;
 
   --green: #54be96;
-  --light: #fbfbfb;
+  --green-accent: #38cd3e;
+  --light: #f3f3f3;
   --black: #191a15;
   --button-hover: #36a379;
+  --card-background: #fbfbfb;
+  --grey: #8a8a89;
 }
 
 body {
