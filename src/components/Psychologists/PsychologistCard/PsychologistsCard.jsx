@@ -1,7 +1,16 @@
 import css from "./PsychologistsCard.module.css";
 import icons from "../../../assets/icons/icons.svg";
+import PsychologistReview from "../PsychologistReview/PsychologistReview";
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 function PsychologistsCard({ item }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleToggle = () => {
+    setIsExpanded((prev) => !prev);
+  };
+
   return (
     <div className={css.wrapper}>
       <div className={css.avatarBox}>
@@ -36,10 +45,13 @@ function PsychologistsCard({ item }) {
               Price / 1 hour:
               <span className={css.priceAccent}>{item.price_per_hour}$</span>
             </li>
-            <button className={css.likeButton}></button>
+            <button className={css.likeButton}>
+              <svg className={css.heartIcon} width={26} height={26}>
+                <use href={`${icons}#icon-likeBtn`}></use>
+              </svg>
+            </button>
           </ul>
         </div>
-
         <div className={css.mainInfoBox}>
           <h2 className={css.name}>{item.name}</h2>
           <ul className={css.qualificationBox}>
@@ -61,9 +73,26 @@ function PsychologistsCard({ item }) {
           <p className={css.aboutText}>{item.about}</p>
         </div>
 
-        <button type="button" className={css.readMoreBtn}>
-          Read more
+        <button
+          type="button"
+          className={css.readMoreBtn}
+          onClick={handleToggle}
+        >
+          {isExpanded ? "Show Less" : "Read More"}
         </button>
+
+        <motion.div
+          initial={{ height: 0, opacity: 0 }}
+          animate={
+            isExpanded
+              ? { height: "auto", opacity: 1 }
+              : { height: 0, opacity: 0 }
+          }
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          style={{ overflow: "hidden" }}
+        >
+          <PsychologistReview item={item} />
+        </motion.div>
       </div>
     </div>
   );

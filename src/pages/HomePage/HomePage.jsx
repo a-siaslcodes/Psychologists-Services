@@ -3,6 +3,7 @@ import hero from "../../assets/img/hero.jpg";
 import css from "./HomePage.module.css";
 
 import icons from "../../assets/icons/icons.svg";
+import { Link, NavLink } from "react-router-dom";
 
 const HomePage = () => {
   return (
@@ -19,12 +20,12 @@ const HomePage = () => {
               a guide in your own life with the help of our experienced
               psychologists.
             </p>
-            <button className={css.button}>
+            <NavLink to="/psychologists" className={css.button}>
               Get started
               <svg className={css.buttonIcon} width={15} height={17}>
                 <use href={`${icons}#icon-arrow`}></use>
               </svg>
-            </button>
+            </NavLink>
           </div>
           <div className={css.heroBox}>
             <span className={css.boxOne}>

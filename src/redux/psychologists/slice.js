@@ -3,6 +3,7 @@ import { fetchPsychologists } from "./operations";
 
 const initialState = {
   items: [],
+  favorites: [],
   total: 0,
   isLoading: false,
   error: false,

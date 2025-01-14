@@ -8,6 +8,7 @@
   --button-hover: #36a379;
   --card-background: #fbfbfb;
   --grey: #8a8a89;
+  --yellow: #ffc531;
 }
 
 body {
@@ -25,9 +26,9 @@ p {
   margin: 0;
 }
 
-p:last-child {
+/* p:last-child {
   margin-bottom: 0;
-}
+} */
 
 ul {
   list-style-type: none;
