@@ -3,12 +3,26 @@ import icons from "../../../assets/icons/icons.svg";
 import PsychologistReview from "../PsychologistReview/PsychologistReview";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { selectFavorites } from "../../../redux/psychologists/selectors";
+
+import { useDispatch, useSelector } from "react-redux";
+import { toggleFavorite } from "../../../redux/psychologists/slice";
 
 function PsychologistsCard({ item }) {
+
   const [isExpanded, setIsExpanded] = useState(false);
+  
+  const dispatch = useDispatch();
 
   const handleToggle = () => {
     setIsExpanded((prev) => !prev);
+  };
+
+  const favorites = useSelector(selectFavorites);
+  const isActive = favorites.some((favorite) => favorite.name === item.name);
+
+  const handleLikeClick = () => {
+    dispatch(toggleFavorite(item));
   };
 
   return (
@@ -45,8 +59,13 @@ function PsychologistsCard({ item }) {
               Price / 1 hour:
               <span className={css.priceAccent}>{item.price_per_hour}$</span>
             </li>
-            <button className={css.likeButton}>
-              <svg className={css.heartIcon} width={26} height={26}>
+
+            <button
+              type="button"
+              className={`${css.likeButton} ${isActive ? css.active : ""}`}
+              onClick={handleLikeClick}
+            >
+              <svg width={26} height={26}>
                 <use href={`${icons}#icon-likeBtn`}></use>
               </svg>
             </button>

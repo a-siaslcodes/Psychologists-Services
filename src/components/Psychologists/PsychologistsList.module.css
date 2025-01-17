@@ -2,4 +2,34 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  margin-bottom: 64px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loadMoreBtn {
+  border-radius: 30px;
+  padding: 14px 48px;
+  width: 176px;
+  height: 48px;
+  background: var(--green);
+
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: #fbfbfb;
+  margin-bottom: 100px;
+  display: flex;
+
+  align-self: center;
+}
+
+.loadMoreBtn:hover {
+  background: var(--button-hover);
 }

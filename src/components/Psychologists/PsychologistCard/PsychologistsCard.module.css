@@ -83,7 +83,7 @@
   margin-left: 4px;
 }
 
-.likeButton {
+/* .likeButton {
   background: none;
   border: none;
   padding: 0;
@@ -91,11 +91,35 @@
   align-items: center;
 }
 
-.heartIcon {
+.likeButton:hover {
+  fill: red;
+  stroke-width: 2px;
+  color: red;
+}
+
+.active {
+  fill: red;
+  stroke: red;
+} */
+
+.likeButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  align-items: center;
+
   fill: transparent;
-  stroke: var(--black);
-  align-self: center;
-  justify-self: center;
+  stroke: black;
+}
+
+.likeButton:hover {
+  fill: transparent;
+  stroke: red;
+}
+
+.active {
+  stroke: red;
 }
 
 .mainInfoBox {

@@ -12,12 +12,10 @@ const PsychologistsPage = () => {
   }, [dispatch]);
 
   return (
-    <>
-      <Container>
-        <div>filters</div>
-        <PsychologistsList />
-      </Container>
-    </>
+    <Container>
+      <div>filters</div>
+      <PsychologistsList />
+    </Container>
   );
 };
 
