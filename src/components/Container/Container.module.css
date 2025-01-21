@@ -5,6 +5,12 @@
   padding: 0 20px;
   margin: 0 auto;
   position: relative;
+
+  /* border: 1px solid purple; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -21,8 +27,8 @@
   }
 }
 
-/* .container {
+.container {
   width: 1440px;
   padding: 0 20px;
   margin: 0 auto;
-} */
+}

@@ -3,14 +3,10 @@ import { fetchPsychologists } from "./operations";
 
 const initialState = {
   items: [],
-  favorites: [],
+  isFavorite: [],
   total: 0,
   isLoading: false,
-  isFavorite: [],
   error: false,
-  hasNextPage: false,
-  limit: 4,
-  page: 1,
 };
 
 const psychologistsSlice = createSlice({
@@ -22,7 +18,6 @@ const psychologistsSlice = createSlice({
       const exists = state.isFavorite.find(
         (favorite) => favorite.name === item.name
       );
-
       if (exists) {
         state.isFavorite = state.isFavorite.filter(
           (favorite) => favorite.name !== item.name
@@ -39,9 +34,9 @@ const psychologistsSlice = createSlice({
         state.error = false;
       })
       .addCase(fetchPsychologists.fulfilled, (state, action) => {
-        // console.log("Payload in fulfilled:", action.payload);
-        state.items = action.payload;
         state.isLoading = false;
+
+        state.items = action.payload;
       })
       .addCase(fetchPsychologists.rejected, (state) => {
         state.isLoading = false;

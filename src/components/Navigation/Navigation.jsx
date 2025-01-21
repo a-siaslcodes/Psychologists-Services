@@ -1,5 +1,5 @@
 import css from "./Navigation.module.css";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Container from "../Container/Container";
 import clsx from "clsx";
 
@@ -12,13 +12,14 @@ const Navigation = () => {
     <header className={css.header}>
       <Container>
         <nav className={css.wrapper}>
-          <div className={css.leftBlock}>
-            <Link className={css.logo} to="/">
-              <p className={css.accent}>
-                psychologists.
-                <span className={css.logo}>services</span>
-              </p>
-            </Link>
+          <NavLink className={css.logo} to="/">
+            <p className={css.accent}>
+              psychologists.
+              <span className={css.logo}>services</span>
+            </p>
+          </NavLink>
+
+          <div className={css.linksBox}>
             <NavLink to="/" className={buildLinkClass}>
               Home
             </NavLink>
@@ -29,6 +30,7 @@ const Navigation = () => {
               Favorite
             </NavLink>
           </div>
+
           <div className={css.authBox}>
             <NavLink to="/login" className={css.loginButton}>
               Log in

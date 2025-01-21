@@ -1,14 +1,9 @@
 .content {
   display: flex;
   flex-direction: row;
-  background-color: var(--light);
 }
 .wrapper {
   display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  justify-items: center;
   gap: 125px;
 }
 
@@ -22,6 +17,7 @@
 
 .heroBox {
   margin-top: 78px;
+  margin-bottom: 78px;
   position: relative;
 }
 

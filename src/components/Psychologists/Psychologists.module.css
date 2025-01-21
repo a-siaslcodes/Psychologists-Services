@@ -1,13 +1,6 @@
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  margin-bottom: 64px;
-}
-
 .content {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   flex-direction: column;
 }
 
@@ -29,7 +22,6 @@
 
   align-self: center;
 }
-
 .loadMoreBtn:hover {
   background: var(--button-hover);
 }

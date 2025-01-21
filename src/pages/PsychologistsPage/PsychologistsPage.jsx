@@ -1,11 +1,15 @@
-import PsychologistsList from "../../components/Psychologists/PsychologistsList";
+import PsychologistsList from "../../components/Psychologists/Psychologists";
 import Container from "../../components/Container/Container";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchPsychologists } from "../../redux/psychologists/operations";
+import { selectPsychologists } from "../../redux/psychologists/selectors";
+
+import css from "./PsychologistsPage.module.css";
 
 const PsychologistsPage = () => {
   const dispatch = useDispatch();
+  const psychologists = useSelector(selectPsychologists); //// add filtered data here as well later
 
   useEffect(() => {
     dispatch(fetchPsychologists());
@@ -13,8 +17,10 @@ const PsychologistsPage = () => {
 
   return (
     <Container>
-      <div>filters</div>
-      <PsychologistsList />
+      <section className={css.wrapper}>
+        {/* <div>filters</div> */}
+        <PsychologistsList psychologists={psychologists} />
+      </section>
     </Container>
   );
 };

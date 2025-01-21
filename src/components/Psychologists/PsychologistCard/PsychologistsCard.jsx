@@ -9,9 +9,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleFavorite } from "../../../redux/psychologists/slice";
 
 function PsychologistsCard({ item }) {
-
   const [isExpanded, setIsExpanded] = useState(false);
-  
+
   const dispatch = useDispatch();
 
   const handleToggle = () => {

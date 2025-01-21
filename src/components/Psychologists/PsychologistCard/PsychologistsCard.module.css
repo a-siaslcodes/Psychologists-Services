@@ -114,12 +114,13 @@
 }
 
 .likeButton:hover {
-  fill: transparent;
-  stroke: red;
+  fill: var(--green);
+  stroke: var(--green);
 }
 
 .active {
-  stroke: red;
+  fill: var(--green);
+  stroke: var(--green);
 }
 
 .mainInfoBox {

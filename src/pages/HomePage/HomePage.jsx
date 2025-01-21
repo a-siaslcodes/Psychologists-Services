@@ -3,7 +3,7 @@ import hero from "../../assets/img/hero.jpg";
 import css from "./HomePage.module.css";
 
 import icons from "../../assets/icons/icons.svg";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const HomePage = () => {
   return (

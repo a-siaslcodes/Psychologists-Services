@@ -11,10 +11,10 @@
   --yellow: #ffc531;
 }
 
-body {
+/* body {
   background-color: var(--light);
   margin: 0;
-}
+} */
 
 h1,
 h2,
@@ -26,9 +26,41 @@ p {
   margin: 0;
 }
 
-/* p:last-child {
-  margin-bottom: 0;
+/* html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+html {
+  background: linear-gradient(
+    to top left,
+    rgba(84, 190, 150, 0.2),
+    var(--light)
+  );
 } */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    to top left,
+    rgba(84, 190, 150, 0.2),
+    var(--light)
+  );
+  z-index: -1;
+}
 
 ul {
   list-style-type: none;
