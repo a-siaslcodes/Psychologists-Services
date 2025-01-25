@@ -1,6 +1,7 @@
 import css from "./PsychologistsCard.module.css";
 import icons from "../../../assets/icons/icons.svg";
 import PsychologistReview from "../PsychologistReview/PsychologistReview";
+import BookAppointmentBtn from "../BookAppointmentBtn/BookAppointmentBtn";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { selectFavorites } from "../../../redux/psychologists/selectors";
@@ -110,6 +111,7 @@ function PsychologistsCard({ item }) {
           style={{ overflow: "hidden" }}
         >
           <PsychologistReview item={item} />
+          <BookAppointmentBtn item={item} />
         </motion.div>
       </div>
     </div>

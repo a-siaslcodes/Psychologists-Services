@@ -1,0 +1,93 @@
+.input {
+  width: 100%;
+  border: 1px solid rgba(25, 26, 21, 0.1);
+  background-color: transparent;
+  border-radius: 12px;
+  padding: 16px 16px 18px;
+  height: 52px;
+
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--black);
+}
+
+.form {
+  width: 472px;
+  border: solid 1px red;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.textarea {
+  border: 1px solid rgba(25, 26, 21, 0.1);
+  border-radius: 12px;
+  padding: 16px 16px 80px 18px;
+  width: 472px;
+  height: 116px;
+  background-color: transparent;
+
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--black);
+  margin-bottom: 32px;
+}
+
+.textarea::placeholder {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--black);
+}
+
+.wrapper {
+  display: flex;
+}
+
+.select {
+  border: 1px solid rgba(25, 26, 21, 0.1);
+  border-radius: 12px;
+  width: 232px;
+  height: 52px;
+}
+
+.phoneInput {
+  border: 1px solid rgba(25, 26, 21, 0.1);
+  border-radius: 12px;
+  padding: 16px 16px 16px 18px;
+  width: 232px;
+  height: 52px;
+}
+
+.input::placeholder {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--black);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.button {
+  border-radius: 30px;
+  padding: 16px 217px;
+  width: 472px;
+  height: 52px;
+  background-color: var(--green);
+
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: var(--light);
+}

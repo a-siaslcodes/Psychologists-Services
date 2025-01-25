@@ -1,0 +1,55 @@
+.wrapper {
+  padding: 64px;
+  background-color: var(--light);
+
+  border-radius: 30px;
+  width: 599px;
+  height: 859px;
+}
+
+.title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+
+.text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: rgba(25, 26, 21, 0.5);
+  margin-bottom: 40px;
+}
+
+.avatar {
+  border-radius: 15px;
+  width: 44px;
+  height: 44px;
+}
+
+.psychologistInfo {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.accent {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 133%;
+  color: var(--grey);
+}
+
+.name {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--black);
+}
