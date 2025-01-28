@@ -2,12 +2,20 @@ import css from "./Navigation.module.css";
 import { NavLink } from "react-router-dom";
 import Container from "../Container/Container";
 import clsx from "clsx";
+import Modal from "../Modal/Modal";
+import LoginModal from "../LoginModal/LoginModal";
+import RegisterModal from "../RegisterModal/RegisterModal";
+
+import { useState } from "react";
 
 const buildLinkClass = ({ isActive }) => {
   return clsx(css.link, isActive && css.linkActive);
 };
 
 const Navigation = () => {
+  const [isLoginModalOpen, setLoginModalopen] = useState(false);
+  const [isRegisterOpen, setRegisterOpen] = useState(false);
+
   return (
     <header className={css.header}>
       <Container>
@@ -32,12 +40,24 @@ const Navigation = () => {
           </div>
 
           <div className={css.authBox}>
-            <NavLink to="/login" className={css.loginButton}>
+            <button
+              className={css.loginButton}
+              onClick={() => setLoginModalopen(true)}
+            >
               Log in
-            </NavLink>
-            <NavLink to="/register" className={css.registerButton}>
+            </button>
+            <Modal isOpen={isLoginModalOpen} setIsOpen={setLoginModalopen}>
+              <LoginModal setIsOpen={setLoginModalopen} />
+            </Modal>
+            <button
+              className={css.registerButton}
+              onClick={() => setRegisterOpen(true)}
+            >
               Registration
-            </NavLink>
+            </button>
+            <Modal isOpen={isRegisterOpen} setIsOpen={setRegisterOpen}>
+              <RegisterModal setIsOpen={setRegisterOpen} />
+            </Modal>
           </div>
         </nav>
       </Container>

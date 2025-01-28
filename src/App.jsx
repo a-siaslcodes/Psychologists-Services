@@ -4,8 +4,6 @@ import HomePage from "./pages/HomePage/HomePage";
 import Navigation from "./components/Navigation/Navigation";
 import PsychologistsPage from "./pages/PsychologistsPage/PsychologistsPage";
 import FavoritesPage from "./pages/FavoritesPage/FavoritesPage";
-import LoginPage from "./pages/LoginPage/LoginPage";
-import RegisterPage from "./pages/RegisterPage/RegisterPage";
 
 function App() {
   return (
@@ -15,9 +13,6 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/psychologists" element={<PsychologistsPage />} />
         <Route path="/favorites" element={<FavoritesPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/favorite" element={<FavoritesPage />} />
       </Routes>
     </div>
   );

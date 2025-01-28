@@ -1,0 +1,85 @@
+.email,
+.name {
+  border: 1px solid rgba(25, 26, 21, 0.1);
+  border-radius: 12px;
+  padding: 16px 16px 16px 18px;
+  width: 438px;
+  height: 52px;
+  background-color: transparent;
+
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--black);
+}
+
+.password {
+  border: 1px solid rgba(25, 26, 21, 0.1);
+  border-radius: 12px;
+  padding: 16px 16px 16px 18px;
+  width: 438px;
+  height: 52px;
+  background-color: transparent;
+
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--black);
+  position: relative;
+}
+
+.email::placeholder,
+.name::placeholder,
+.password::placeholder {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--black);
+}
+
+.wrapper {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.button {
+  border-radius: 30px;
+  padding: 16px 16px;
+  width: 438px;
+  height: 52px;
+  background-color: var(--green);
+
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: var(--light);
+}
+.button:hover {
+  background-color: var(--button-hover);
+}
+
+.passwordWrapper {
+  position: relative;
+}
+
+.hideButton {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  stroke: var(--black);
+}
