@@ -1,0 +1,44 @@
+.linksBox {
+  display: flex;
+}
+
+.accent {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: var(--green);
+}
+
+.logo {
+  font-weight: 600;
+  color: var(--black);
+}
+
+.link {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: var(--black);
+
+  margin-right: 40px;
+}
+
+.linkActive {
+  position: relative;
+}
+
+.linkActive::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: var(--button-hover);
+  border-radius: 50%;
+}

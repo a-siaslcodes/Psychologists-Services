@@ -6,7 +6,6 @@
   height: 52px;
   background-color: transparent;
 
-  font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
   color: var(--black);
@@ -20,7 +19,6 @@
   height: 52px;
   background-color: transparent;
 
-  font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
   color: var(--black);
@@ -29,7 +27,6 @@
 
 .email::placeholder,
 .password::placeholder {
-  font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
   line-height: 125%;
@@ -50,7 +47,6 @@
   height: 52px;
   background-color: var(--green);
 
-  font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
   line-height: 125%;
