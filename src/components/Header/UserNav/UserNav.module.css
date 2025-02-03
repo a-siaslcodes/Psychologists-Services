@@ -1,0 +1,49 @@
+.userName {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: var(--black);
+  font-family: var(--font-family);
+  margin-right: 28px;
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--green);
+  margin-right: 14px;
+}
+
+.icon {
+  fill: var(--light);
+  width: 24px;
+  height: 24px;
+}
+
+.logOutBtn {
+  border: 1px solid rgba(25, 26, 21, 0.2);
+  background-color: transparent;
+  border-radius: 30px;
+  width: 135px;
+  height: 48px;
+
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+  color: var(--black);
+}
+
+.logOutBtn:hover {
+  background-color: rgba(84, 190, 150, 0.2);
+}
+.userNav {
+  display: flex;
+  align-items: center;
+}

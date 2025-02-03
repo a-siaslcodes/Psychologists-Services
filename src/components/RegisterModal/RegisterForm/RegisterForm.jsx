@@ -1,12 +1,14 @@
 import css from "./RegisterForm.module.css";
+import icons from "../../../assets/icons/icons.svg";
 
 import { useState } from "react";
-
+import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
-import icons from "../../../assets/icons/icons.svg";
+import { registerUser } from "../../../redux/auth/operations";
 
 const RegisterForm = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const dispatch = useDispatch();
 
   const {
     handleSubmit,
@@ -21,9 +23,19 @@ const RegisterForm = () => {
     },
   });
 
-  const onSubmit = (data) => {
-    console.log("Form Data:", data);
-    reset();
+  const onSubmit = async (data) => {
+    try {
+      const result = dispatch(registerUser(data));
+
+      if (result.error) {
+        console.error("Registration Error:", result.error.message);
+      } else {
+        console.log("Registration Successful:", result);
+        reset();
+      }
+    } catch (error) {
+      console.error("Registration Failed:", error);
+    }
   };
 
   const togglePasswordVisibility = () => {

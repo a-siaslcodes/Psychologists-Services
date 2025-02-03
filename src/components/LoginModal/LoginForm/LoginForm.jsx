@@ -2,9 +2,12 @@ import { useState } from "react";
 import css from "./LoginForm.module.css";
 import { useForm } from "react-hook-form";
 import icons from "../../../assets/icons/icons.svg";
+import { loginUser } from "../../../redux/auth/operations";
+import { useDispatch } from "react-redux";
 
 const LoginForm = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const dispatch = useDispatch();
 
   const {
     handleSubmit,
@@ -19,8 +22,18 @@ const LoginForm = () => {
   });
 
   const onSubmit = (data) => {
-    console.log("Form Data:", data);
-    reset();
+    try {
+      const result = dispatch(loginUser(data));
+
+      if (result.error) {
+        console.error("Login Error:", result.error.message);
+      } else {
+        console.log("Login Successful:", result);
+        reset();
+      }
+    } catch (error) {
+      console.error("Login Failed:", error);
+    }
   };
 
   const togglePasswordVisibility = () => {

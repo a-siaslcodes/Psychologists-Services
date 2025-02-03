@@ -5,7 +5,8 @@ import { getDatabase, ref, get } from "firebase/database";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  // apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  apiKey: "AIzaSyC-FKl7f1p1OBIswLLnQbl5dUhzKfei6y0",
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
   databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
   projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
