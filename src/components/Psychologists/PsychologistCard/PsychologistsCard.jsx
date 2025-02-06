@@ -9,7 +9,7 @@ import { selectFavorites } from "../../../redux/psychologists/selectors";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleFavorite } from "../../../redux/psychologists/slice";
 
-function PsychologistsCard({ item }) {
+function PsychologistsCard({ psychologist }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const dispatch = useDispatch();
@@ -19,17 +19,19 @@ function PsychologistsCard({ item }) {
   };
 
   const favorites = useSelector(selectFavorites);
-  const isActive = favorites.some((favorite) => favorite.name === item.name);
+  const isActive = favorites.some(
+    (favorite) => favorite.id === psychologist.id
+  );
 
   const handleLikeClick = () => {
-    dispatch(toggleFavorite(item));
+    dispatch(toggleFavorite(psychologist));
   };
 
   return (
     <div className={css.wrapper}>
       <div className={css.avatarBox}>
         <img
-          src={item.avatar_url}
+          src={psychologist.avatar_url}
           alt="Psychologist Avatar"
           width={96}
           height={96}
@@ -48,7 +50,7 @@ function PsychologistsCard({ item }) {
               <use href={`${icons}#icon-star`}></use>
             </svg>
             <li>
-              Rating:<span className={css.helper}>{item.rating}</span>
+              Rating:<span className={css.helper}>{psychologist.rating}</span>
             </li>
 
             <svg className={css.dashIcon} width={3} height={16}>
@@ -57,7 +59,9 @@ function PsychologistsCard({ item }) {
 
             <li>
               Price / 1 hour:
-              <span className={css.priceAccent}>{item.price_per_hour}$</span>
+              <span className={css.priceAccent}>
+                {psychologist.price_per_hour}$
+              </span>
             </li>
 
             <button
@@ -72,24 +76,27 @@ function PsychologistsCard({ item }) {
           </ul>
         </div>
         <div className={css.mainInfoBox}>
-          <h2 className={css.name}>{item.name}</h2>
+          <h2 className={css.name}>{psychologist.name}</h2>
           <ul className={css.qualificationBox}>
             <li className={css.qualificationItem}>
-              Experience:<span className={css.text}> {item.experience}</span>
+              Experience:
+              <span className={css.text}> {psychologist.experience}</span>
             </li>
             <li className={css.qualificationItem}>
-              License:<span className={css.text}> {item.license}</span>
+              License:<span className={css.text}> {psychologist.license}</span>
             </li>
             <li className={css.qualificationItem}>
               Specialization:
-              <span className={css.text}> {item.specialization}</span>
+              <span className={css.text}> {psychologist.specialization}</span>
             </li>
             <li className={css.qualificationItem}>
               Initial consultation:
-              <span className={css.text}> {item.initial_consultation}</span>
+              <span className={css.text}>
+                {psychologist.initial_consultation}
+              </span>
             </li>
           </ul>
-          <p className={css.aboutText}>{item.about}</p>
+          <p className={css.aboutText}>{psychologist.about}</p>
         </div>
 
         <button
@@ -110,8 +117,8 @@ function PsychologistsCard({ item }) {
           transition={{ duration: 0.5, ease: "easeInOut" }}
           style={{ overflow: "hidden" }}
         >
-          <PsychologistReview item={item} />
-          <BookAppointmentBtn item={item} />
+          <PsychologistReview item={psychologist} />
+          <BookAppointmentBtn item={psychologist} />
         </motion.div>
       </div>
     </div>

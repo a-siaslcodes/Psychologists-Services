@@ -5,9 +5,9 @@ function PsychologistsList({ psychologists }) {
   return (
     <div>
       <ul className={css.wrapper}>
-        {psychologists?.map((item, index) => (
-          <li key={index}>
-            <PsychologistsCard item={item} />
+        {psychologists.map((psychologist) => (
+          <li key={psychologist.id}>
+            <PsychologistsCard psychologist={psychologist} />
           </li>
         ))}
       </ul>

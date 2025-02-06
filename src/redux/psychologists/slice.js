@@ -16,11 +16,11 @@ const psychologistsSlice = createSlice({
     toggleFavorite: (state, action) => {
       const item = action.payload;
       const exists = state.isFavorite.find(
-        (favorite) => favorite.name === item.name
+        (favorite) => favorite.id === item.id
       );
       if (exists) {
         state.isFavorite = state.isFavorite.filter(
-          (favorite) => favorite.name !== item.name
+          (favorite) => favorite.id !== item.id
         );
       } else {
         state.isFavorite.push(item);

@@ -29,8 +29,8 @@ const Navigation = () => {
           Psychologists
         </NavLink>
         {isLoggedIn && (
-          <NavLink to="/favorite" className={buildLinkClass}>
-            Favorite
+          <NavLink to="/favorites" className={buildLinkClass}>
+            Favorites
           </NavLink>
         )}
       </div>

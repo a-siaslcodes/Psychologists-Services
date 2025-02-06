@@ -4,8 +4,10 @@ import {
   signInWithEmailAndPassword,
   updateProfile,
   signOut,
+  onAuthStateChanged,
 } from "firebase/auth";
 import { auth } from "../../firebase";
+import { setUser, clearUser } from "./slice";
 
 export const registerUser = createAsyncThunk(
   "auth/registerUser",
@@ -74,3 +76,27 @@ export const logOutUser = createAsyncThunk(
     }
   }
 );
+
+export const initializeAuthListener = () => {
+  return (dispatch, getState) => {
+    onAuthStateChanged(auth, (user) => {
+      const { user: currentUser } = getState().auth;
+
+      if (user && (!currentUser || currentUser.uid !== user.uid)) {
+        dispatch(
+          setUser({
+            uid: user.uid,
+            email: user.email,
+            displayName: user.displayName,
+          })
+        );
+      } else if (!user && currentUser) {
+        dispatch(clearUser());
+      }
+    });
+  };
+};
+
+// onAuthStateChanged(auth, (user) => {
+//   console.log("user status changed", user);
+// });
