@@ -1,15 +1,36 @@
+.likeButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  align-items: center;
+
+  fill: transparent;
+  stroke: black;
+}
+
+/* .likeButton:hover {
+  fill: var(--green);
+  stroke: var(--green);
+} */
+
+.active {
+  fill: var(--green);
+  stroke: var(--green);
+}
+
 .wrapper {
   border-radius: 30px;
-  width: 565px;
-  height: 509px;
+  width: 500px;
+  height: 200px;
   background-color: var(--light);
-  padding: 64px;
+  padding: 54px;
 }
 
 .title {
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 40px;
+  font-size: 26px;
   line-height: 1.2;
   letter-spacing: -0.02em;
   color: var(--black);

@@ -9,7 +9,7 @@ import css from "./PsychologistsPage.module.css";
 
 const PsychologistsPage = () => {
   const dispatch = useDispatch();
-  const psychologists = useSelector(selectPsychologists); //// add filtered data here as well later
+  const psychologists = useSelector(selectPsychologists);
 
   useEffect(() => {
     dispatch(fetchPsychologists());

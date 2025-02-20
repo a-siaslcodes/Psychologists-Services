@@ -4,27 +4,14 @@ import PsychologistReview from "../PsychologistReview/PsychologistReview";
 import BookAppointmentBtn from "../BookAppointmentBtn/BookAppointmentBtn";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { selectFavorites } from "../../../redux/psychologists/selectors";
 
-import { useDispatch, useSelector } from "react-redux";
-import { toggleFavorite } from "../../../redux/psychologists/slice";
+import LikeButton from "../../LikeButton/LikeButton";
 
 function PsychologistsCard({ psychologist }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const dispatch = useDispatch();
-
   const handleToggle = () => {
     setIsExpanded((prev) => !prev);
-  };
-
-  const favorites = useSelector(selectFavorites);
-  const isActive = favorites.some(
-    (favorite) => favorite.id === psychologist.id
-  );
-
-  const handleLikeClick = () => {
-    dispatch(toggleFavorite(psychologist));
   };
 
   return (
@@ -64,15 +51,7 @@ function PsychologistsCard({ psychologist }) {
               </span>
             </li>
 
-            <button
-              type="button"
-              className={`${css.likeButton} ${isActive ? css.active : ""}`}
-              onClick={handleLikeClick}
-            >
-              <svg width={26} height={26}>
-                <use href={`${icons}#icon-likeBtn`}></use>
-              </svg>
-            </button>
+            <LikeButton psychologist={psychologist} />
           </ul>
         </div>
         <div className={css.mainInfoBox}>

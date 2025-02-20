@@ -1,11 +1,11 @@
 import css from "./FavoritesPage.module.css";
 import Container from "../../components/Container/Container";
-import { selectFavorites } from "../../redux/psychologists/selectors";
+import { SelectFavorite } from "../../redux/auth/selectors";
 import { useSelector } from "react-redux";
 import PsychologistsCard from "../../components/Psychologists/PsychologistCard/PsychologistsCard";
 
 function FavoritesPage() {
-  const favorites = useSelector(selectFavorites);
+  const favorites = useSelector(SelectFavorite);
 
   return (
     <div>
