@@ -14,7 +14,6 @@ const Header = () => {
       <Container>
         <nav className={css.wrapper}>
           <Navigation />
-
           {isLoggedIn ? <UserNav /> : <AuthNav />}
         </nav>
       </Container>

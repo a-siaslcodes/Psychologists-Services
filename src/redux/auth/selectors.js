@@ -9,3 +9,7 @@ export const SelectUserId = (state) => {
 };
 
 export const SelectFavorite = (state) => state.auth.user.favorites;
+
+export const SelectIsLoading = (state) => state.auth.isLoading;
+
+export const SelectError = (state) => state.auth.error;
