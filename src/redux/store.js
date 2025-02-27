@@ -1,6 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import psychologistsReducer from "./psychologists/slice";
 import authReducer from "./auth/slice";
+import { combineReducers } from "redux";
+
+import favoritesReducer from "./favorites/slice";
+
 import { initializeAuthListener } from "./auth/operations";
 
 import {
@@ -15,22 +19,22 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
-const psychologistsPersistConfig = {
+const persistConfig = {
   key: "psychologists",
   storage,
-  whitelist: ["items"],
+  whitelist: ["psychologists"],
 };
 
-const persistedPsychologistsReducer = persistReducer(
-  psychologistsPersistConfig,
-  psychologistsReducer
-);
+const rootReducer = combineReducers({
+  auth: authReducer,
+  psychologists: psychologistsReducer,
+  favorites: favoritesReducer,
+});
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
-  reducer: {
-    psychologists: persistedPsychologistsReducer,
-    auth: authReducer,
-  },
+  reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {

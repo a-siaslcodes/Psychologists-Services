@@ -4,14 +4,16 @@ import {
   SelectIsLoading,
   SelectIsLoggedIn,
   SelectError,
+  SelectIsRefreshing,
 } from "../../redux/auth/selectors";
 
 const PrivateRoute = () => {
   const isLoading = useSelector(SelectIsLoading);
   const isLoggedIn = useSelector(SelectIsLoggedIn);
   const authError = useSelector(SelectError);
+  const isRefreshing = useSelector(SelectIsRefreshing);
 
-  if (isLoading) {
+  if (isLoading || isRefreshing) {
     return <p>Loading...</p>;
   }
 

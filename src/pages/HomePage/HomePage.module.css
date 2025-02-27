@@ -23,9 +23,10 @@
 
 .heroImg {
   border-radius: 10px;
-  width: 464px;
+  max-width: 464px;
   height: 526px;
   display: block;
+  flex-shrink: 0;
 }
 
 .title {

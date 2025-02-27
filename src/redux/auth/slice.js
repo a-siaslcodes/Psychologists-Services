@@ -1,7 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { registerUser, loginUser, logOutUser } from "./operations";
-
-import { addFavorite, removeFavorite } from "./operations";
+import {
+  registerUser,
+  loginUser,
+  logOutUser,
+  initializeAuthListener,
+} from "./operations";
 
 const authSlice = createSlice({
   name: "auth",
@@ -10,17 +13,20 @@ const authSlice = createSlice({
     isLoggedIn: false,
     isLoading: false,
     error: null,
+    isRefreshing: true,
   },
   reducers: {
     setUser: (state, action) => {
       state.user = action.payload;
       state.isLoggedIn = true;
+      state.isRefreshing = false;
     },
     clearUser: (state) => {
       state.user = null;
       state.isLoading = false;
       state.isLoggedIn = false;
       state.error = null;
+      state.isRefreshing = false;
     },
   },
   extraReducers: (builder) =>
@@ -65,23 +71,11 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.error = null;
       })
-      .addCase(addFavorite.fulfilled, (state, action) => {
-        if (state.user) {
-          state.user.favorites.push(action.payload);
-        }
+      .addCase(initializeAuthListener.pending, (state) => {
+        state.isRefreshing = true;
       })
-      .addCase(addFavorite.rejected, (state) => {
-        state.error = true;
-      })
-      .addCase(removeFavorite.fulfilled, (state, action) => {
-        if (state.user) {
-          state.user.favorites = state.user.favorites.filter(
-            (psychologist) => psychologist.id !== action.payload
-          );
-        }
-      })
-      .addCase(removeFavorite.rejected, (state) => {
-        state.error = true;
+      .addCase(initializeAuthListener.fulfilled, (state) => {
+        state.isRefreshing = false;
       }),
 });
 

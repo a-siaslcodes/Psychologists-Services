@@ -12,13 +12,14 @@ const PsychologistsPage = () => {
   const psychologists = useSelector(selectPsychologists);
 
   useEffect(() => {
-    dispatch(fetchPsychologists());
-  }, [dispatch]);
+    if (psychologists.length === 0) {
+      dispatch(fetchPsychologists());
+    }
+  }, [dispatch, psychologists.length]);
 
   return (
     <Container>
       <section className={css.wrapper}>
-        {/* <div>filters</div> */}
         <PsychologistsList psychologists={psychologists} />
       </section>
     </Container>
