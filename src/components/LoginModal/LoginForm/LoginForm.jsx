@@ -63,7 +63,7 @@ const LoginForm = () => {
             onClick={togglePasswordVisibility}
             className={css.hideButton}
           >
-            <svg className={css.icon}>
+            <svg className={css.iconEye} width="20" height="20">
               <use
                 href={`${icons}#${isPasswordVisible ? "icon-eye" : "eye-off"}`}
               />

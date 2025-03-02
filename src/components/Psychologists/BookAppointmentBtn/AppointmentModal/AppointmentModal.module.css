@@ -5,6 +5,14 @@
   border-radius: 30px;
   width: 599px;
   height: 859px;
+  max-height: 87vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
 }
 
 .title {
