@@ -1,5 +1,5 @@
 import css from "./Psychologists.module.css";
-import PsychologistsList from "./PsychologistsList/Psychologists";
+import PsychologistsList from "./PsychologistsList/PsychologistsList";
 
 import { useState, useMemo } from "react";
 

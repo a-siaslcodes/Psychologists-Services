@@ -6,11 +6,17 @@ const initialState = {
   total: 0,
   isLoading: false,
   error: false,
+  currentFilter: "Show all",
 };
 
 const psychologistsSlice = createSlice({
   name: "psychologists",
   initialState,
+  reducers: {
+    setFilter(state, action) {
+      state.currentFilter = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchPsychologists.pending, (state) => {
@@ -28,5 +34,7 @@ const psychologistsSlice = createSlice({
       });
   },
 });
+
+export const { setFilter } = psychologistsSlice.actions;
 
 export default psychologistsSlice.reducer;

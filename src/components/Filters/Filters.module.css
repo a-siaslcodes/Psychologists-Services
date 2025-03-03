@@ -1,0 +1,75 @@
+.selectWrapper {
+  padding-top: 44px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.label {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  color: var(--grey);
+  margin-bottom: 8px;
+}
+
+.select {
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  padding-left: 18px;
+  padding-right: 18px;
+  width: 226px;
+  height: 48px;
+  background-color: #54be96;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #fbfbfb;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.selectDropdown {
+  position: absolute;
+  padding: 18px;
+  top: 100%;
+  left: 0;
+  border-radius: 14px;
+  width: 226px;
+  height: 216px;
+  box-shadow: 0 20px 69px 0 rgba(0, 0, 0, 0.07);
+  background: #fff;
+  overflow-y: auto;
+  z-index: 1;
+  margin-top: 8px;
+}
+
+.selectOption {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(25, 26, 21, 0.3);
+
+  margin-bottom: 8px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.selectOption:focus,
+.selectOption:hover {
+  color: #191a15;
+  outline: none;
+}
+
+.selectOption:active {
+  color: #191a15;
+}
+
+.arrowIcon {
+  margin-left: auto;
+}
