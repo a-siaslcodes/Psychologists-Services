@@ -21,7 +21,7 @@ const Modal = ({ children, isOpen, setIsOpen }) => {
           aria-label="close modal button"
         >
           <svg className={css.icon}>
-            <use href={`${icons}#icon-close`} />
+            <use href={`${icons}#icon-x`} />
           </svg>
         </button>
         {children}

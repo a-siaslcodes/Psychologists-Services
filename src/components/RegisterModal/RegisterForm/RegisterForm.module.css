@@ -59,10 +59,6 @@
   background-color: var(--button-hover);
 }
 
-.passwordWrapper {
-  position: relative;
-}
-
 .hideButton {
   position: absolute;
   top: 50%;
@@ -81,4 +77,24 @@
   stroke-width: 1;
   stroke: black;
   fill: transparent;
+}
+
+.error {
+  color: red;
+  font-size: 0.75rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-30%, -50%);
+}
+
+.nameWrapper {
+  position: relative;
+}
+
+.emailWrapper {
+  position: relative;
+}
+.passwordWrapper {
+  position: relative;
 }

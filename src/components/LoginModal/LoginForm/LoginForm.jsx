@@ -4,6 +4,9 @@ import { useForm } from "react-hook-form";
 import icons from "../../../assets/icons/icons.svg";
 import { loginUser } from "../../../redux/auth/operations";
 import { useDispatch } from "react-redux";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { loginValidationSchema } from "../../../utils/validation";
+import { ToastContainer, toast } from "react-toastify";
 
 const LoginForm = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -19,20 +22,16 @@ const LoginForm = () => {
       email: "",
       password: "",
     },
+    resolver: yupResolver(loginValidationSchema),
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     try {
-      const result = dispatch(loginUser(data));
-
-      if (result.error) {
-        console.error("Login Error:", result.error.message);
-      } else {
-        console.log("Login Successful:", result);
-        reset();
-      }
+      const result = await dispatch(loginUser(data)).unwrap();
+      console.log(result);
+      reset();
     } catch (error) {
-      console.error("Login Failed:", error);
+      toast.error(`Login Failed: ${error.message}`);
     }
   };
 
@@ -43,13 +42,15 @@ const LoginForm = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={css.form}>
       <div className={css.wrapper}>
-        <input
-          {...register("email")}
-          type="text"
-          placeholder="Email"
-          className={css.email}
-        />
-        {errors.email && <p className={css.error}>{errors.email.message}</p>}
+        <div className={css.emailWrapper}>
+          <input
+            {...register("email")}
+            type="text"
+            placeholder="Email"
+            className={css.email}
+          />
+          {errors.email && <p className={css.error}>{errors.email.message}</p>}
+        </div>
 
         <div className={css.passwordWrapper}>
           <input
@@ -69,10 +70,10 @@ const LoginForm = () => {
               />
             </svg>
           </button>
+          {errors.password && (
+            <p className={css.error}>{errors.password.message}</p>
+          )}
         </div>
-        {errors.password && (
-          <p className={css.error}>{errors.password.message}</p>
-        )}
       </div>
 
       <div>
@@ -80,6 +81,7 @@ const LoginForm = () => {
           Log in
         </button>
       </div>
+      <ToastContainer position="top-right" autoClose={2000} />
     </form>
   );
 };

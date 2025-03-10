@@ -2,7 +2,6 @@
   width: 14px;
   height: 14px;
 
-  fill: black;
   stroke: black;
 
   z-index: 103;
@@ -35,6 +34,7 @@
 
 .closeButton {
   position: absolute;
+  background-color: transparent;
   top: 20px;
   right: 20px;
 

@@ -5,6 +5,8 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { registerUser } from "../../../redux/auth/operations";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { registerValidationSchema } from "../../../utils/validation";
 
 const RegisterForm = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -21,6 +23,7 @@ const RegisterForm = () => {
       email: "",
       password: "",
     },
+    resolver: yupResolver(registerValidationSchema),
   });
 
   const onSubmit = async (data) => {
@@ -45,21 +48,25 @@ const RegisterForm = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={css.form}>
       <div className={css.wrapper}>
-        <input
-          {...register("name")}
-          type="text"
-          placeholder="Name"
-          className={css.name}
-        />
-        {errors.email && <p className={css.error}>{errors.email.message}</p>}
+        <div className={css.nameWrapper}>
+          <input
+            {...register("name")}
+            type="text"
+            placeholder="Name"
+            className={css.name}
+          />
+          {errors.name && <p className={css.error}>{errors.name.message}</p>}
+        </div>
 
-        <input
-          {...register("email")}
-          type="text"
-          placeholder="Email"
-          className={css.email}
-        />
-        {errors.email && <p className={css.error}>{errors.email.message}</p>}
+        <div className={css.emailWrapper}>
+          <input
+            {...register("email")}
+            type="text"
+            placeholder="Email"
+            className={css.email}
+          />
+          {errors.email && <p className={css.error}>{errors.email.message}</p>}
+        </div>
 
         <div className={css.passwordWrapper}>
           <input
@@ -79,10 +86,10 @@ const RegisterForm = () => {
               />
             </svg>
           </button>
+          {errors.password && (
+            <p className={css.error}>{errors.password.message}</p>
+          )}
         </div>
-        {errors.password && (
-          <p className={css.error}>{errors.password.message}</p>
-        )}
       </div>
 
       <div>

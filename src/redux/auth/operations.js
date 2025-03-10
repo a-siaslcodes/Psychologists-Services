@@ -81,7 +81,7 @@ export const loginUser = createAsyncThunk(
         },
       };
     } catch (error) {
-      return rejectWithValue(error.message);
+      return rejectWithValue(error);
     }
   }
 );

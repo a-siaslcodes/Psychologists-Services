@@ -1,7 +1,7 @@
 import css from "./AppointmentModal.module.css";
 import BookForm from "../../BookForm/BookForm";
 
-const AppointmentModal = ({ item }) => {
+const AppointmentModal = ({ item, setIsOpen }) => {
   return (
     <div className={css.wrapper}>
       <h2 className={css.title}>Make an appointment with a psychologists</h2>
@@ -21,7 +21,7 @@ const AppointmentModal = ({ item }) => {
           <p className={css.name}>{item.name}</p>
         </div>
       </div>
-      <BookForm />
+      <BookForm onClose={() => setIsOpen(false)} />
     </div>
   );
 };

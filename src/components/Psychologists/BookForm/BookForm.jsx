@@ -1,15 +1,20 @@
-import { useForm } from "react-hook-form";
-
 import css from "./BookForm.module.css";
+
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { bookValidationSchema } from "../../../utils/validation";
+import { ToastContainer, toast } from "react-toastify";
 import TimePicker from "./TimePicker/TimePicker";
 
-const BookForm = () => {
+const BookForm = ({ onClose }) => {
   const {
     handleSubmit,
     control,
     register,
+    reset,
     formState: { errors },
   } = useForm({
+    resolver: yupResolver(bookValidationSchema),
     defaultValues: {
       name: "",
       email: "",
@@ -21,6 +26,15 @@ const BookForm = () => {
 
   const onSubmit = (data) => {
     console.log("Form Data:", data);
+    toast("Thank you, you will be contacted shortly!");
+
+    reset();
+
+    setTimeout(() => {
+      if (onClose) {
+        onClose();
+      }
+    }, 2000);
   };
 
   return (
@@ -32,13 +46,10 @@ const BookForm = () => {
           placeholder="Name"
           className={css.input}
         />
-        {errors.address && (
-          <p className={css.error}>{errors.address.message}</p>
-        )}
+        {errors.name && <p className={css.error}>{errors.name.message}</p>}
       </div>
 
       <div className={css.wrapper}>
-        {/* Phone */}
         <div className={css.phone}>
           <input
             {...register("phone")}
@@ -51,6 +62,7 @@ const BookForm = () => {
 
         <TimePicker control={control} name="meetingTime" errors={errors} />
       </div>
+
       <div className={css.email}>
         <input
           {...register("email")}
@@ -75,6 +87,7 @@ const BookForm = () => {
       <div>
         <button className={css.button}>Send</button>
       </div>
+      <ToastContainer position="top-right" autoClose={1500} />
     </form>
   );
 };
