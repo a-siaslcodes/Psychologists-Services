@@ -23,11 +23,8 @@ function Psychologists({ psychologists }) {
 
   return (
     <div className={css.content}>
-      {psychologists && psychologists.length > 0 ? (
-        <PsychologistsList psychologists={visiblePsychologists} />
-      ) : (
-        <p>No data found</p>
-      )}
+      <PsychologistsList psychologists={visiblePsychologists} />
+
       {hasMore && (
         <button onClick={handleLoadMore} className={css.loadMoreBtn}>
           Load More

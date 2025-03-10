@@ -2,6 +2,8 @@ import { createSelector } from "@reduxjs/toolkit";
 
 export const selectPsychologists = (state) => state.psychologists.items;
 
+export const selectIsLoading = (state) => state.psychologists.isLoading;
+
 export const selectFilter = (state) => state.psychologists.currentFilter;
 
 export const selectFilteredPsychologists = createSelector(
