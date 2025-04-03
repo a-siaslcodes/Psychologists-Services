@@ -9,11 +9,6 @@
   stroke: black;
 }
 
-/* .likeButton:hover {
-  fill: var(--green);
-  stroke: var(--green);
-} */
-
 .active {
   fill: var(--green);
   stroke: var(--green);
@@ -21,16 +16,19 @@
 
 .wrapper {
   border-radius: 30px;
-  width: 500px;
-  height: 200px;
+  /* width: 500px;
+  height: 200px; */
+  width: 280px;
+  height: 190px;
   background-color: var(--light);
-  padding: 54px;
+  padding: 36px;
+  /* padding: 54px; */
 }
 
 .title {
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.2;
   letter-spacing: -0.02em;
   color: var(--black);
@@ -44,4 +42,26 @@
   line-height: 1.2;
   color: rgba(25, 26, 21, 0.5);
   margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .likeButton {
+    margin-left: auto;
+  }
+
+  .wrapper {
+    width: 280px;
+    height: 190px;
+    background-color: var(--light);
+    padding: 36px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .likeButton {
+    align-self: start;
+  }
 }

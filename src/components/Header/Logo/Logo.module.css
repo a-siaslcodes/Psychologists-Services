@@ -1,0 +1,38 @@
+.accent {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--green);
+}
+
+.logo {
+  font-weight: 500;
+  color: var(--black);
+}
+.logoWrapper {
+  margin-right: 34px;
+}
+
+@media only screen and (min-width: 768px) {
+  .logoWrapper {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .accent {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--green);
+  }
+
+  .logo {
+    font-weight: 600;
+    color: var(--black);
+  }
+}

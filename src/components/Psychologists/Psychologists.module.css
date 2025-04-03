@@ -1,6 +1,5 @@
 .content {
   display: flex;
-  /* align-items: center; */
   flex-direction: column;
 }
 
@@ -19,9 +18,15 @@
   color: #fbfbfb;
   margin-bottom: 100px;
   display: flex;
-
   align-self: center;
 }
+
 .loadMoreBtn:hover {
   background: var(--button-hover);
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 1440px) {
 }

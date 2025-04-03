@@ -1,3 +1,4 @@
+
 import css from "./PsychologistsCard.module.css";
 import icons from "../../../assets/icons/icons.svg";
 import PsychologistReview from "../PsychologistReview/PsychologistReview";
@@ -30,8 +31,12 @@ function PsychologistsCard({ psychologist }) {
       </div>
 
       <div className={css.cardInfoBox}>
-        <div className={css.subInfo}>
-          <p>Psychologist</p>
+        <div className={css.topInfoWrapper}>
+          <div className={css.subInfo}>
+            <p className={css.position}>Psychologist</p>
+            <h2 className={css.name}>{psychologist.name}</h2>
+          </div>
+
           <ul className={css.subWrapper}>
             <svg className={css.starIcon} width={16} height={16}>
               <use href={`${icons}#icon-star`}></use>
@@ -54,8 +59,8 @@ function PsychologistsCard({ psychologist }) {
             <LikeButton psychologist={psychologist} />
           </ul>
         </div>
+
         <div className={css.mainInfoBox}>
-          <h2 className={css.name}>{psychologist.name}</h2>
           <ul className={css.qualificationBox}>
             <li className={css.qualificationItem}>
               Experience:

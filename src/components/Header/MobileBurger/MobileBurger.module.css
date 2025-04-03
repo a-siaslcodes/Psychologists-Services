@@ -1,0 +1,92 @@
+/* .mobileHeader {
+  position: relative;
+}
+
+.burger {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+}
+.menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.menu.open {
+  display: flex;
+  z-index: 100;
+}
+
+@media only screen and (min-width: 1440px) {
+  .mobileHeader {
+    display: none;
+  }
+} */
+
+.mobileHeader {
+  position: relative;
+}
+
+.burger {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 101;
+}
+
+.icon {
+  align-self: center;
+  stroke: black;
+}
+
+/* Основне меню */
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  background: white;
+  box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  z-index: 100;
+}
+
+/* Кнопка закриття */
+.close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+@media only screen and (min-width: 1440px) {
+  .mobileHeader {
+    display: none;
+  }
+}

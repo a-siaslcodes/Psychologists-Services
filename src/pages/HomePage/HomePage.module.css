@@ -1,42 +1,27 @@
-.content {
-  display: flex;
-  flex-direction: row;
-}
 .wrapper {
   display: flex;
-  gap: 125px;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
 }
 
 .mainBox {
-  margin-top: 126px;
+  margin-top: 50px;
   display: flex;
+  align-items: center;
   flex-direction: column;
-  height: 438px;
-  width: 595px;
-}
-
-.heroBox {
-  margin-top: 78px;
-  margin-bottom: 78px;
-  position: relative;
-}
-
-.heroImg {
-  border-radius: 10px;
-  max-width: 464px;
-  height: 526px;
-  display: block;
-  flex-shrink: 0;
 }
 
 .title {
   font-family: var(--font-family);
   font-weight: 600;
-  font-size: 80px;
-  line-height: 102%;
+  font-size: 28px;
+  line-height: 1.02;
   letter-spacing: -0.02em;
   color: var(--black);
   margin-bottom: 20px;
+  width: 278px;
 }
 
 .accent {
@@ -47,23 +32,24 @@
 .text {
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 18px;
-  line-height: 133%;
+  font-size: 16px;
+  line-height: 1.33;
   letter-spacing: -0.02em;
   color: var(--black);
   margin-bottom: 40px;
-  width: 510px;
+  width: 278px;
 }
+
 .button {
-  border-radius: 30px;
-  width: 235px;
-  height: 60px;
+  border-radius: 20px;
+  width: 180px;
+  height: 45px;
   background-color: var(--green);
 
   font-family: var(--font-family);
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 120%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
   letter-spacing: -0.01em;
   color: var(--light);
   display: flex;
@@ -78,31 +64,45 @@
 
 .buttonIcon {
   display: inline-block;
-  width: 15px;
-  height: 17px;
+  width: 11px;
+  height: 13px;
   fill: #ffff;
-  margin-left: 18px;
+  margin-left: 10px;
 }
 
 .infoBox {
-  border-radius: 20px;
-  width: 311px;
-  height: 118px;
+  border-radius: 14px;
+  width: 165px;
+  height: 71px;
   background-color: var(--green);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
-
+  gap: 14px;
+  padding: 10px;
   position: absolute;
-  bottom: 75px;
-  left: -101px;
+  bottom: 25px;
+  left: -20px;
+}
+
+.heroBox {
+  margin-top: 50px;
+  margin-bottom: 78px;
+  position: relative;
+}
+
+.heroImg {
+  border-radius: 10px;
+  max-width: 250px;
+  height: 270px;
+  display: block;
+  flex-shrink: 0;
 }
 
 .infoBoxIcon {
-  border-radius: 13px;
-  width: 54px;
-  height: 54px;
+  border-radius: 12px;
+  width: 38px;
+  height: 38px;
   background-color: var(--light);
   display: flex;
   justify-content: center;
@@ -112,14 +112,15 @@
 .infoBoxText {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   color: rgba(251, 251, 251, 0.5);
+  margin-bottom: 2px;
 }
 
 .infoBoxNumber {
   font-family: var(--font-family);
   font-weight: 700;
-  font-size: 24px;
+  font-size: 18px;
   color: var(--light);
 }
 
@@ -132,8 +133,8 @@
 .boxTwo {
   display: block;
   border-radius: 10px;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   background: #4535af;
   transform: rotate(-15deg);
 
@@ -142,19 +143,26 @@
   align-items: center;
 
   position: absolute;
-  top: 185px;
-  left: -29px;
+  top: 101px;
+  left: -20px;
+}
+
+.questionIcon {
+  fill: var(--light);
+  width: 8px;
+  height: 15px;
+  transform: rotate(15deg);
 }
 
 .boxOne {
   display: block;
-  border-radius: 10px;
+  border-radius: 8px;
   background: #fbc75e;
 
   transform: rotate(15deg);
 
-  width: 48px;
-  height: 48px;
+  width: 35px;
+  height: 35px;
 
   display: flex;
   justify-content: center;
@@ -162,19 +170,297 @@
 
   position: absolute;
   top: 38px;
-  left: 449px;
-}
-
-.questionIcon {
-  fill: var(--light);
-  width: 10px;
-  height: 17px;
-  transform: rotate(15deg);
+  left: 240px;
 }
 
 .userIcon {
   fill: var(--light);
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   transform: rotate(-15deg);
+}
+
+@media only screen and (min-width: 768px) {
+  .content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    gap: 125px;
+    align-items: unset;
+  }
+
+  .mainBox {
+    margin-top: 70px;
+    align-items: start;
+  }
+
+  .heroImg {
+    max-width: 266px;
+    height: 297px;
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .infoBox {
+    bottom: 48px;
+    left: -101px;
+
+    width: 165px;
+    height: 71px;
+  }
+
+  .infoBoxIcon {
+    border-radius: 6px;
+    width: 28px;
+    height: 28px;
+    background-color: var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .infoBoxText {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    color: rgba(251, 251, 251, 0.5);
+    margin-bottom: 2px;
+  }
+  .checkIcon {
+    fill: var(--green);
+    width: 16px;
+    height: 12px;
+  }
+
+  .infoBoxNumber {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--light);
+  }
+  .boxTwo {
+    position: absolute;
+    top: 105px;
+    left: -29px;
+  }
+
+  .boxOne {
+    position: absolute;
+    top: 18px;
+    left: 267px;
+  }
+
+  .questionIcon {
+    fill: var(--light);
+    width: 10px;
+    height: 17px;
+    transform: rotate(15deg);
+  }
+
+  .userIcon {
+    fill: var(--light);
+    height: 25px;
+    width: 25px;
+    transform: rotate(-15deg);
+  }
+
+  .boxOne {
+    top: 38px;
+    left: 242px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .content {
+    display: flex;
+    flex-direction: row;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    gap: 125px;
+    width: unset;
+  }
+
+  .mainBox {
+    margin-top: 126px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    height: 438px;
+    width: 595px;
+  }
+
+  .heroBox {
+    margin-top: 78px;
+    margin-bottom: 78px;
+    position: relative;
+  }
+
+  .heroImg {
+    border-radius: 10px;
+    max-width: 464px;
+    height: 526px;
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .title {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 102%;
+    letter-spacing: -0.02em;
+    color: var(--black);
+    margin-bottom: 20px;
+    width: 595px;
+  }
+
+  .accent {
+    color: var(--green);
+    font-style: italic;
+  }
+
+  .text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 133%;
+    letter-spacing: -0.02em;
+    color: var(--black);
+    margin-bottom: 40px;
+    width: 510px;
+  }
+
+  .button {
+    border-radius: 30px;
+    width: 235px;
+    height: 60px;
+    background-color: var(--green);
+
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+    color: var(--light);
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .buttonIcon {
+    display: inline-block;
+    width: 15px;
+    height: 17px;
+    fill: #ffff;
+    margin-left: 18px;
+  }
+
+  .infoBox {
+    border-radius: 20px;
+    width: 311px;
+    height: 118px;
+    background-color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    position: absolute;
+    bottom: 75px;
+    left: -101px;
+  }
+
+  .infoBoxIcon {
+    border-radius: 13px;
+    width: 54px;
+    height: 54px;
+    background-color: var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .infoBoxText {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(251, 251, 251, 0.5);
+  }
+
+  .infoBoxNumber {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--light);
+  }
+
+  .checkIcon {
+    fill: var(--green);
+    width: 20px;
+    height: 16px;
+  }
+
+  .boxTwo {
+    display: block;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    background: #4535af;
+    transform: rotate(-15deg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 185px;
+    left: -29px;
+  }
+
+  .boxOne {
+    display: block;
+    border-radius: 10px;
+    background: #fbc75e;
+
+    transform: rotate(15deg);
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 38px;
+    left: 449px;
+  }
+
+  .questionIcon {
+    fill: var(--light);
+    width: 10px;
+    height: 17px;
+    transform: rotate(15deg);
+  }
+
+  .userIcon {
+    fill: var(--light);
+    height: 25px;
+    width: 25px;
+    transform: rotate(-15deg);
+  }
 }

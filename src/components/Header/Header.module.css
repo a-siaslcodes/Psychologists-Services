@@ -3,11 +3,36 @@
 }
 
 .wrapper {
-  width: 1184px;
   display: flex;
-
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding-top: 24px;
   padding-bottom: 24px;
+  width: 100%;
+}
+
+.desktopNav {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 1440px) {
+  .mobileNav {
+    display: none;
+  }
+
+  .desktopNav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .wrapper {
+    width: 1184px;
+    display: flex;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
 }

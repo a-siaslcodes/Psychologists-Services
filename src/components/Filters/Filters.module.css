@@ -20,12 +20,12 @@
   align-items: center;
   padding-left: 18px;
   padding-right: 18px;
-  width: 226px;
+  width: 196px;
   height: 48px;
   background-color: #54be96;
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.25;
   color: #fbfbfb;
   cursor: pointer;
@@ -39,7 +39,7 @@
   top: 100%;
   left: 0;
   border-radius: 14px;
-  width: 226px;
+  width: 196px;
   height: 216px;
   box-shadow: 0 20px 69px 0 rgba(0, 0, 0, 0.07);
   background: #fff;
@@ -51,7 +51,7 @@
 .selectOption {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.25;
   color: rgba(25, 26, 21, 0.3);
 
@@ -72,4 +72,22 @@
 
 .arrowIcon {
   margin-left: auto;
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 1440px) {
+  .select {
+    width: 226px;
+    font-size: 16px;
+  }
+
+  .selectDropdown {
+    width: 226px;
+  }
+
+  .selectOption {
+    font-size: 16px;
+  }
 }

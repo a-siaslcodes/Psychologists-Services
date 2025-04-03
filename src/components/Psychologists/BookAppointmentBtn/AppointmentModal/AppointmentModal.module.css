@@ -1,35 +1,30 @@
 .wrapper {
-  padding: 64px;
+  padding: 24px;
   background-color: var(--light);
-
-  border-radius: 30px;
-  width: 599px;
-  height: 859px;
+  border-radius: 24px;
+  height: 100%;
   max-height: 87vh;
   overflow-y: auto;
   overflow-x: hidden;
 }
 
-.wrapper::-webkit-scrollbar-thumb {
-  background-color: #ccc;
-  border-radius: 10px;
-}
-
 .title {
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 40px;
-  line-height: 120%;
+  font-size: 24px;
+
+  line-height: 1.2;
   letter-spacing: -0.02em;
   color: var(--black);
   margin-bottom: 20px;
+  margin-top: 30px;
 }
 
 .text {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 16px;
-  line-height: 125%;
+  font-size: 14px;
+  line-height: 1.25;
   color: rgba(25, 26, 21, 0.5);
   margin-bottom: 40px;
 }
@@ -60,4 +55,33 @@
   font-size: 16px;
   line-height: 150%;
   color: var(--black);
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    width: 560px;
+    padding: 44px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .wrapper {
+    padding: 64px;
+    border-radius: 30px;
+    width: 599px;
+    height: 859px;
+  }
+
+  .title {
+    font-size: 40px;
+    margin-top: 0;
+  }
+
+  .text {
+    font-size: 16px;
+  }
 }

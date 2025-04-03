@@ -1,15 +1,15 @@
 .wrapper {
   border-radius: 30px;
-  width: 565px;
-  height: 579px;
+  width: 290px;
+  height: 100%;
   background-color: var(--light);
-  padding: 64px;
+  padding: 24px;
 }
 
 .title {
   font-weight: 500;
-  font-size: 40px;
-  line-height: 120%;
+  font-size: 24px;
+  line-height: 1.2;
   letter-spacing: -0.02em;
   color: var(--black);
   margin-bottom: 20px;
@@ -17,8 +17,27 @@
 
 .text {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 125%;
+  font-size: 14px;
+  line-height: 1.25;
   color: rgba(25, 26, 21, 0.5);
   margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    width: 565px;
+    height: 579px;
+    padding: 64px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
 }

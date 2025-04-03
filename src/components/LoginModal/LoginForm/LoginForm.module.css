@@ -1,34 +1,21 @@
-.email {
-  border: 1px solid rgba(25, 26, 21, 0.1);
-  border-radius: 12px;
-  padding: 16px 16px 16px 18px;
-  width: 438px;
-  height: 52px;
-  background-color: transparent;
-
-  font-weight: 400;
-  font-size: 16px;
-  color: var(--black);
-}
-
+.email,
 .password {
   border: 1px solid rgba(25, 26, 21, 0.1);
   border-radius: 12px;
-  padding: 16px 16px 16px 18px;
-  width: 438px;
-  height: 52px;
+  padding: 16px 16px 16px 16px;
+  min-width: 230px;
+  height: 48px;
   background-color: transparent;
-
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   color: var(--black);
 }
 
 .email::placeholder,
 .password::placeholder {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 125%;
+  font-size: 14px;
+  line-height: 1.25;
   color: var(--black);
 }
 
@@ -41,14 +28,14 @@
 
 .button {
   border-radius: 30px;
-  padding: 16px 196px;
-  width: 438px;
-  height: 52px;
+
+  min-width: 230px;
+  height: 48px;
   background-color: var(--green);
 
   font-weight: 500;
-  font-size: 16px;
-  line-height: 125%;
+  font-size: 14px;
+  line-height: 1.25;
   letter-spacing: -0.01em;
   color: var(--light);
 }
@@ -68,7 +55,7 @@
 .hideButton {
   position: absolute;
   top: 50%;
-  right: 16px;
+  right: 21px;
   transform: translateY(-50%);
   background: none;
   border: none;
@@ -77,8 +64,8 @@
 }
 
 .iconEye {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   display: inline-block;
   stroke-width: 1;
   stroke: black;
@@ -92,4 +79,39 @@
   right: 0;
   top: 50%;
   transform: translate(-30%, -50%);
+}
+
+@media only screen and (min-width: 768px) {
+  .email {
+    width: 438px;
+    height: 52px;
+    font-size: 16px;
+  }
+
+  .password {
+    width: 438px;
+    height: 52px;
+    font-size: 16px;
+  }
+
+  .email::placeholder,
+  .password::placeholder {
+    font-size: 16px;
+  }
+
+  .button {
+    padding: 16px 196px;
+    width: 438px;
+    height: 52px;
+    font-size: 16px;
+  }
+
+  .iconEye {
+    width: 20px;
+    height: 20px;
+  }
+
+  .hideButton {
+    right: 16px;
+  }
 }

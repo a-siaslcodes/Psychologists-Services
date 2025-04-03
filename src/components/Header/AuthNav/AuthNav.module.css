@@ -1,4 +1,4 @@
-.authBox {
+/* .authBox {
   display: flex;
   gap: 8px;
 }
@@ -43,4 +43,78 @@
 
 .loginButton:hover {
   background-color: rgba(84, 190, 150, 0.2);
+} */
+
+/* ---------adaptive design ---------------- */
+
+.authBox {
+  display: flex;
+  gap: 8px;
+}
+
+.registerButton {
+  border-radius: 18px;
+  width: 96px;
+  height: 42px;
+  background-color: var(--green);
+  color: var(--light);
+  text-align: center;
+  align-items: center;
+  align-content: center;
+
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+.registerButton:hover {
+  background-color: var(--button-hover);
+}
+
+.loginButton {
+  border-radius: 18px;
+  border: 1px solid rgba(25, 26, 21, 0.2);
+  background: transparent;
+  width: 96px;
+  height: 42px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--black);
+}
+
+.loginButton:hover {
+  background-color: rgba(84, 190, 150, 0.2);
+}
+
+@media only screen and (min-width: 1440px) {
+  .registerButton {
+    border-radius: 30px;
+    width: 171px;
+    height: 48px;
+
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .loginButton {
+    border-radius: 30px;
+    width: 124px;
+    height: 48px;
+
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .authBox {
+    display: flex;
+    gap: 8px;
+  }
 }

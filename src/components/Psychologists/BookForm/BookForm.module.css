@@ -1,15 +1,14 @@
 .input {
-  width: 100%;
+  width: 230px;
   border: 1px solid rgba(25, 26, 21, 0.1);
   background-color: transparent;
   border-radius: 12px;
   padding: 16px 16px 18px;
-  height: 52px;
-
+  height: 48px;
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 16px;
-  line-height: 125%;
+  font-size: 14px;
+  line-height: 1.25;
   color: var(--black);
 }
 
@@ -23,15 +22,15 @@
 .textarea {
   border: 1px solid rgba(25, 26, 21, 0.1);
   border-radius: 12px;
-  padding: 16px 16px 80px 18px;
-  width: 472px;
-  height: 116px;
+  padding: 14px 14px 14px 14px;
+  width: 230px;
+  height: 90px;
   background-color: transparent;
 
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 16px;
-  line-height: 125%;
+  font-size: 14px;
+  line-height: 1.25;
   color: var(--black);
   margin-bottom: 32px;
 }
@@ -39,14 +38,15 @@
 .textarea::placeholder {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 16px;
-  line-height: 125%;
+  font-size: 14px;
+  line-height: 1.25;
   color: var(--black);
 }
 
 .wrapper {
   display: flex;
   gap: 8px;
+  flex-direction: column;
 }
 
 .select {
@@ -67,27 +67,23 @@
 .input::placeholder {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 16px;
-  line-height: 125%;
+  font-size: 14px;
+  line-height: 1.25;
   color: var(--black);
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: row;
 }
 
 .button {
   border-radius: 30px;
-  padding: 16px 217px;
-  width: 472px;
+  padding: 16px;
+  width: 230px;
   height: 52px;
   background-color: var(--green);
 
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 16px;
-  line-height: 125%;
+  font-size: 14px;
+
+  line-height: 1.25;
   letter-spacing: -0.01em;
   color: var(--light);
 }
@@ -116,4 +112,71 @@
 
 .email {
   position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    flex-direction: row;
+  }
+
+  .input {
+    width: 100%;
+    font-size: 16px;
+    height: 52px;
+  }
+  .form {
+    width: 472px;
+  }
+
+  .textarea {
+    padding: 16px 16px 16px 16px;
+    width: 472px;
+    height: 116px;
+    font-size: 16px;
+  }
+
+  .button {
+    padding: 16px 217px;
+    width: 472px;
+    height: 52px;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .input {
+    width: 100%;
+    font-size: 16px;
+    height: 52px;
+  }
+
+  .form {
+    width: 472px;
+  }
+
+  .wrapper {
+    flex-direction: row;
+  }
+
+  .textarea {
+    padding: 16px 16px 80px 18px;
+    width: 472px;
+    height: 116px;
+    font-size: 16px;
+  }
+
+  .textarea::placeholder {
+    font-size: 16px;
+  }
+
+  .input::placeholder {
+    font-size: 16px;
+  }
+
+  .button {
+    padding: 16px 217px;
+    width: 472px;
+    height: 52px;
+    font-size: 16px;
+  }
 }

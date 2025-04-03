@@ -1,16 +1,15 @@
 .wrapper {
   border-radius: 30px;
-  width: 565px;
-  height: 509px;
-  max-height: 529px;
+  padding: 24px;
+  width: 290px;
+  padding: 28px;
   background-color: var(--light);
-  padding: 64px;
 }
 
 .title {
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 40px;
+  font-size: 24px;
   line-height: 1.2;
   letter-spacing: -0.02em;
   color: var(--black);
@@ -20,8 +19,32 @@
 .text {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.2;
   color: rgba(25, 26, 21, 0.5);
   margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    border-radius: 30px;
+    height: 509px;
+    max-height: 529px;
+    padding: 64px;
+    width: 565px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .title {
+    font-size: 40px;
+  }
 }

@@ -3,12 +3,12 @@
   border: 1px solid rgba(25, 26, 21, 0.1);
   border-radius: 12px;
   padding: 16px 16px 16px 18px;
-  width: 438px;
-  height: 52px;
+  width: 238px;
+  height: 48px;
   background-color: transparent;
 
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   color: var(--black);
 }
 
@@ -16,12 +16,11 @@
   border: 1px solid rgba(25, 26, 21, 0.1);
   border-radius: 12px;
   padding: 16px 16px 16px 18px;
-  width: 438px;
-  height: 52px;
+  width: 238px;
+  height: 48px;
   background-color: transparent;
-
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   color: var(--black);
   position: relative;
 }
@@ -30,8 +29,8 @@
 .name::placeholder,
 .password::placeholder {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 125%;
+  font-size: 14px;
+  line-height: 1.25;
   color: var(--black);
 }
 
@@ -45,13 +44,14 @@
 .button {
   border-radius: 30px;
   padding: 16px 16px;
-  width: 438px;
-  height: 52px;
+
+  width: 238px;
+  height: 48px;
   background-color: var(--green);
 
   font-weight: 500;
-  font-size: 16px;
-  line-height: 125%;
+  font-size: 14px;
+  line-height: 1.25;
   letter-spacing: -0.01em;
   color: var(--light);
 }
@@ -71,8 +71,8 @@
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   display: inline-block;
   stroke-width: 1;
   stroke: black;
@@ -97,4 +97,34 @@
 }
 .passwordWrapper {
   position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .email,
+  .name,
+  .password {
+    width: 438px;
+    height: 52px;
+    font-size: 16px;
+  }
+
+  .email::placeholder,
+  .name::placeholder,
+  .password::placeholder {
+    font-size: 16px;
+  }
+
+  .button {
+    width: 438px;
+    height: 52px;
+    font-size: 16px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
 }
