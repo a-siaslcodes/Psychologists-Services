@@ -1,13 +1,17 @@
 .wrapper {
   box-sizing: border-box;
   border-radius: 24px;
-  width: 304px;
+  /* width: 304px; */
+  min-width: 290px;
   background: var(--card-background);
   display: flex;
   flex-direction: column;
 
   gap: 24px;
   padding: 24px;
+}
+.priceBox {
+  margin-right: 8px;
 }
 
 .avatarBox {
@@ -63,14 +67,11 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 1.5;
-
-  /* border: solid 1px blue; */
 }
 
 .topInfoWrapper {
   display: flex;
   flex-direction: column;
-  /* border: 1px solid red; */
   margin-bottom: 24px;
 }
 
@@ -155,7 +156,8 @@
 
 @media only screen and (min-width: 768px) {
   .wrapper {
-    width: 760px;
+    /* width: 760px; */
+    min-width: 760px;
     flex-direction: unset;
   }
 

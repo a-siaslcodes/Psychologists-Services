@@ -21,7 +21,9 @@
   letter-spacing: -0.02em;
   color: var(--black);
   margin-bottom: 20px;
-  width: 278px;
+  /* width: 278px; */
+  max-width: 600px; /* або інше обмеження, яке підходить */
+  width: 100%;
 }
 
 .accent {
@@ -37,7 +39,9 @@
   letter-spacing: -0.02em;
   color: var(--black);
   margin-bottom: 40px;
-  width: 278px;
+  /* width: 278px; */
+  max-width: 600px;
+  width: 100%;
 }
 
 .button {

@@ -1,4 +1,3 @@
-
 import css from "./PsychologistsCard.module.css";
 import icons from "../../../assets/icons/icons.svg";
 import PsychologistReview from "../PsychologistReview/PsychologistReview";
@@ -49,7 +48,7 @@ function PsychologistsCard({ psychologist }) {
               <use href={`${icons}#icon-dash`}></use>
             </svg>
 
-            <li>
+            <li className={css.priceBox}>
               Price / 1 hour:
               <span className={css.priceAccent}>
                 {psychologist.price_per_hour}$

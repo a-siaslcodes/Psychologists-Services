@@ -16,13 +16,11 @@
 
 .wrapper {
   border-radius: 30px;
-  /* width: 500px;
-  height: 200px; */
-  width: 280px;
-  height: 190px;
+
+  max-width: 280px;
+  height: 180px;
   background-color: var(--light);
-  padding: 36px;
-  /* padding: 54px; */
+  padding: 30px;
 }
 
 .title {
@@ -63,5 +61,12 @@
 @media only screen and (min-width: 1440px) {
   .likeButton {
     align-self: start;
+  }
+
+  .wrapper {
+    width: 500px;
+    height: 200px;
+
+    padding: 42px;
   }
 }

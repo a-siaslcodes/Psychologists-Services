@@ -4,6 +4,30 @@ import icons from "../../assets/icons/icons.svg";
 
 const Modal = ({ children, isOpen, setIsOpen }) => {
   return (
+    // <ReactModal
+    //   isOpen={isOpen}
+    //   overlayClassName={css.overlay}
+    //   className={css.modal}
+    //   shouldCloseOnOverlayClick={true}
+    //   onRequestClose={() => setIsOpen(false)}
+    //   ariaHideApp={false}
+    //   onAfterOpen={() => (document.body.style.overflow = "hidden")}
+    //   onAfterClose={() => (document.body.style.overflow = "unset")}
+    // >
+    //   <div className={css.modalContent}>
+    //     <button
+    //       className={css.closeButton}
+    //       onClick={() => setIsOpen(false)}
+    //       aria-label="close modal button"
+    //     >
+    //       <svg className={css.icon}>
+    //         <use href={`${icons}#icon-x`} />
+    //       </svg>
+    //     </button>
+    //     {children}
+    //   </div>
+    // </ReactModal>
+
     <ReactModal
       isOpen={isOpen}
       overlayClassName={css.overlay}
@@ -14,18 +38,17 @@ const Modal = ({ children, isOpen, setIsOpen }) => {
       onAfterOpen={() => (document.body.style.overflow = "hidden")}
       onAfterClose={() => (document.body.style.overflow = "unset")}
     >
-      <div className={css.modalContent}>
-        <button
-          className={css.closeButton}
-          onClick={() => setIsOpen(false)}
-          aria-label="close modal button"
-        >
-          <svg className={css.icon}>
-            <use href={`${icons}#icon-x`} />
-          </svg>
-        </button>
-        {children}
-      </div>
+      <button
+        className={css.closeButton}
+        onClick={() => setIsOpen(false)}
+        aria-label="close modal button"
+      >
+        <svg className={css.icon}>
+          <use href={`${icons}#icon-x`} />
+        </svg>
+      </button>
+
+      <div className={css.modalContent}>{children}</div>
     </ReactModal>
   );
 };

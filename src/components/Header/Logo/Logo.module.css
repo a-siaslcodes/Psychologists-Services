@@ -12,7 +12,7 @@
   color: var(--black);
 }
 .logoWrapper {
-  margin-right: 34px;
+  /* margin-right: 34px; */
 }
 
 @media only screen and (min-width: 768px) {
