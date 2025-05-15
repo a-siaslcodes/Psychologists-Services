@@ -59,7 +59,7 @@
 
 .subWrapper {
   display: flex;
-  margin-left: auto;
+
   color: var(--black);
   align-items: center;
 
@@ -156,7 +156,6 @@
 
 @media only screen and (min-width: 768px) {
   .wrapper {
-    /* width: 760px; */
     min-width: 760px;
     flex-direction: unset;
   }
@@ -164,7 +163,6 @@
   .topInfoWrapper {
     display: flex;
     flex-direction: row;
-    /* border: 1px solid red; */
   }
 
   .priceAccent {
@@ -173,6 +171,7 @@
 
   .subWrapper {
     align-items: start;
+    margin-left: auto;
   }
 
   .dashIcon {

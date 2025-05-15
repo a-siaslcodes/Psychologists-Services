@@ -4,6 +4,7 @@
   padding: 0;
   cursor: pointer;
   align-items: center;
+  margin-left: auto;
 
   fill: transparent;
   stroke: black;
