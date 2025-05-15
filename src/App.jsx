@@ -1,4 +1,5 @@
 import "./App.css";
+import "modern-normalize/modern-normalize.css";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import Header from "./components/Header/Header";
